@@ -29,7 +29,7 @@ composer require idpromogroup/laravel-gemini:dev-main
 
 ```
 GEMINI_API_KEY=
-GEMINI_MODEL=gemini-2.5-flash
+GEMINI_MODEL=gemini-3.8-flash
 ```
 
 Миграции грузятся из пакета, публиковать их не обязательно:
@@ -50,7 +50,7 @@ php artisan vendor:publish --tag=config --provider="Idpromogroup\LaravelGemini\L
 use Idpromogroup\LaravelGemini\LgService;
 
 $service = new LgService($externalKey, 'Your message here');
-$result = $service->setModel('gemini-2.5-flash')
+$result = $service->setModel('gemini-3.8-flash')
     ->setInstructions('You are a helpful assistant')
     ->execute();
 

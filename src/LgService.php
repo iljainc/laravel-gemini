@@ -15,7 +15,7 @@ use Illuminate\Support\Str;
 class LgService implements LlmService
 {
     private string $externalKey;
-    private string $model = 'gemini-2.5-flash';
+    private string $model = 'gemini-3.8-flash';
     private ?string $message = null;
     private ?ProcessService $processService = null;
     private ?string $instructions = null;
@@ -35,7 +35,7 @@ class LgService implements LlmService
     public function __construct(string $externalKey, ?string $message = null)
     {
         $this->externalKey = $externalKey;
-        $this->model = (string) config('gemini.default_model', 'gemini-2.5-flash');
+        $this->model = (string) config('gemini.default_model', 'gemini-3.8-flash');
         if ($message !== null) {
             $this->message = $message;
         }

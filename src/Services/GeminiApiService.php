@@ -36,7 +36,7 @@ class GeminiApiService implements LlmApiClient
 
     public function generate(array $request): ?array
     {
-        $model = $request['model'] ?? config('gemini.default_model', 'gemini-2.5-flash');
+        $model = $request['model'] ?? config('gemini.default_model', 'gemini-3.8-flash');
         $body = $this->buildGenerateBody($request);
 
         lg_debug("GeminiApiService::generate() model={$model}");

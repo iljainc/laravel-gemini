@@ -12,7 +12,7 @@ return new class extends Migration
             $table->id();
             $table->string('name');
             $table->text('instructions')->nullable();
-            $table->string('model')->default('gemini-2.5-flash');
+            $table->string('model')->default('gemini-3.8-flash');
             $table->json('tools')->nullable();
             $table->decimal('temperature', 3, 2)->default(1.0);
             $table->string('response_format')->default('text');
@@ -46,7 +46,7 @@ return new class extends Migration
             $table->unsignedBigInteger('user_id')->nullable();
             $table->string('name');
             $table->text('instructions')->nullable();
-            $table->string('model')->default('gemini-2.5-flash');
+            $table->string('model')->default('gemini-3.8-flash');
             $table->json('tools')->nullable();
             $table->decimal('temperature', 3, 2)->default(1.0);
             $table->string('response_format')->default('text');
